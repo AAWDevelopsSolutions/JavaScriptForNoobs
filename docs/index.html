@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title> JavaScript CheatSheet </title>
+  <!-- This loads Tailwind CSS from the CDN -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+
+
+<body class="bg-purple-100 p-8">
+
+<div class="overflow-x-auto w-full">
+
+<table class="w-full mx-auto table-fixed border collapse">
+<!--Table Header-->
+<thead class="bg-gray-100">
+    <tr>
+      <th class="w-1/3 border px-6 py-3 text-left text-md font-medium text-black-500 uppercase tracking-wider"> Class or Method </th>
+      <th class="w-1/3 border px-6 py-3 text-left text-md font-medium text-black-500 uppercase tracking-wider"> Description </th>
+      <th class="w-1/3 border px-6 py-3 text-left text-md font-medium text-black-500 uppercase tracking-wider"> Example</th>
+    </tr>
+  </thead>
+  <!--Table Body-->
+<tbody class="bg-gray-50">
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> appendChild() </div>
+        </td>
+
+    <!--Space in between cells-->    
+    
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> An HTML DOM method that after creating an element, you can use this function to place the element in the appropriate location within the document. The element to append is the only parameter. </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Creates the element -p- and text "Hello World". Appends Hello World -/p- to the HTML document. <br> -head- <br> -script- <br> function addPara() { <br> var newPara = document.createElement("p"); <br> var newText = document.createTextNode("Hello World!") ; <br> newPara.appendChild(newText) ; <br> document.body.appendChild(newPara) ; <br> } <br> -/script- <br> -/head- -body onload="addPara()"- <br> -/body- </div>
+        </td>
+    </tr>
+
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Arrays </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Created by declaring the array elements in []. An array can be assigned to a variable, usually using the keyword const or var. Arrays use zero based indexing to access their elements. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+             <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> const Beatles = ["Ringo", "Paul","George","John"]; <br> //Here Beatles[0] is "Ringo". </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Date() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Constructor is new Date ([optional parameters]). If the constructor is declared with no parameters, it returns current local date and time. New dates can be created by passing parameters to new Date function. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //create a new date from a string <br> var newDate = new Date("2021-1-17 13:15:30") ; <br> <br> //create a new date instance representing 17 Jan 2021 00:00:00 <br> //note that the month number is zero-based <br> var newDate = new Date(2021, 0, 17); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> document.createElement() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Takes one tag name parameter and creates an element with that name. Can place the element elsewhere on the page using functions like insertBefore(), appendChild(), replaceChild(). </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Creates the element -p- and text "Hello World". Appends Hello World <br> -p- to the HTML document. <br> -head- <br> -script- <br> function addPara(){ <br> var newPara = document.createElement("p"); <br> var newText = document.createTextNode("Hello World!"); <br> newPara.appendChild(newText); <br> document.body.appendChild(newPara); <br> } <br> -/script- <br> -/head> <br> -body onload="addPara()"- <br> -/body- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> document.createTextNode() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Takes a string as input text and returns a text node with the input text. </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Creates the element -p- and text "Hello World". Appends Hello World <br> -p- to the HMTL document. <br> -head- <br> -script- <br> function addPara() { <br> var newPara = document.createElement("p"); <br> var newText = document.createTextNode("Hello World!"); <br> newPara.appendChild(newText); <br> } <br> -/script- <br> -/head- <br> -body onload="addPara()"- <br> -/body- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> document.getElementByID() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A method of the DOM that takes an ID value parameter and returns an element that matches the id. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Changes the content of the div to "Hello World!" <br> -div id="div1"- <br> -p- Hello -/p- <br> -p- Hello -/p- <br> -/div- <br> <br> -script- <br> document.getElementByID("div1").innerHTML = "-p- Hello World! -/p-"; <br> -/script- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> document.getElementsByTagName() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A method of the DOM that takes a tag name parameter and returns an array called "NodeList" that contains elements with the specified tag name. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Gets an array of all elements in a document with the -p- tag. <br> var tagNameArray = document.getElementsByTagName("p");</div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> document.write() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Writes HTML or JavaScript to a document. Note that it overwrites any other text in the document so is mostly used for testing purposes only. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Writes "Hello World" to the output stream. <br> document.write("Hello World"); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> element.getAttribute() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Returns the value of the specified attribute. Takes one parameter: the attribute name whose value is to be returned. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Removes the CSS style color blue <br> -div id="div1" style="color: blue"- -/div- <br> -script- <br> var div1 = document.getelementById("div1"). getAttribute("style"); <br> -/script- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> element.inner.HTML() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A property of the Element class that returns or alters contents of an HTML element as a text string. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Changes the content of the div to "Hello World!" <br> -div id="div1"- <br> -p- Hello -/p- <br> -p- Hello -/p- <br> -/div- <br> <br> -script- <br> document.getElementById("div1").innerHTML = "-p- Hello World! -/p-"; <br> -/script- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> element.removeAttribute() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A property of the Element class that removes all previously set inline CSS styles for a particular element. Takes one parameter: the attribute name that is being removed. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Removes the CSS style color blue <br> -div id="div1" style="color: blue"- -/div- <br> -script- <br> var div1 = document.getelementById("div1").getAttribute("style"); <br> -/script-</div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> element.setAttribute() </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A property of the Element class that overwrites all previously set inline CSS styles for a particular element. Takes two parameters: the attribute name that is being set and the attribute value the attribute is set to. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //In all elements named "theImage" sets the name of all src attributes <br> to "another.gif" <br> document.getElementById("theImage").setAttribute("src",<br>"another.gif"); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> element.style() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A property of the Element class that returns or alters inline CSS. Syntax is element.style.propertyName = value </div>
+        </td>
+
+<!--Space in between cells-->
+        
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Changes the CSS style color from blue to red <br> -div id="div1" style="color: blue"- -/div- <br>-script- <br> var div1 = document.getelementById("div1"); <br> div1.style.color = "red"; <br> -/script- </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Error Objects </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Instance creates two properties about the error: message that contains description of the eror and the name property identifies the type of error. Generic error plus 6 other core errors: TypeError, RangeError, URIError, EvalError, ReferenceError, SyntaxError. <br> Error object can be extended to create custom error message using the throw keyword. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Catch statement defines a block of code to be executed if an error <br> occurs in the try block. <br> catch (err) { <br> document.getElementById("myfile").innerHTML = err.name; <br> } <br> //Creates custom error message <br> throw new Error ("Only values 1-10 are permitted"); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> History Objects </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> The history object is part of the window object and contains the URLs visited by the user within a browser window. It exposes useful methods and properties that let you navigate back and forth through the user's history and manipulate the contents of the history stack. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Go back two pages if the history exists in the history list. <br> history.go(-2); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> insertBefore() </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> An HTML DOM method that, after creating an element, places a child element in the appropriate location before an existing child. The method takes two parameters, the node object to be inserted and the existing node to insert before. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Creates a new -li- element and places it in the elementList before <br> the first child of -ul- <br> let newLI = document.createElement("li"); <br> newLI.innerText = "new Element"; <br> let elementList = document.getElementById("thisList"); <br> elementList.insertBefore(newLI, elementList.childNodes[0]); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Location Objects </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> The location object is part of the window object and contains information about the current URL </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Returns the hostname property <br> let myhost = location.hostname; <br> newLI.innerText = "new Element"; </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Navigator Objects </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> The navigator object is part of the window object class in the DOM that represents the client Internet browser, also called the user agent. There is no standard for this object so what it returns differs from browser to browser. </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Retrieves the name of the browser <br> var browsername = navigator.appName; </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> onload() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> A DOM event that starts a method when a page is loaded. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Executes myFunction after MyHTMLPage has been loaded <br> document.getElementById("MyHTMLPage").onload = function () <br> {myFunction};</div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> replaceChild() </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> After creating an element, this function replaces a child node with a new node </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Creates a new node and replaces the second element in "thisList" with <br> the word "blue" <br> let secondBullet = document.createTextNode("blue"); <br> var myList = document.getElementById("thisList").childNodes[1]; <br> myList.replaceChild(secondBullet, myList.childNodes[1]);  </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Screen Objects </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> The screen object is part of the window object class in the DOM that can be used to return properties about the user's screen </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Returns the height and widht of the user's screen <br> var height=screen.height; <br> var width=screen.width; </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Window Objects </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> The DOM window object is at the top of the DOM hierarchy and serves as the global object. Everything in the DOM takes place in a window. The window object controls the environment that contains the document. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Opens a new browser window with the specified URL <br> window.open("http://www.w3schools.com"); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> window.open() </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Opens a new window. The first parameter is a path, a URL, or an empty string, and optional parameters include the window name, features such as the placement of the window or the dimensions, and a Boolean replace value. The feature parameter is a comma separated string of a name-value pairs and the reaplce parameter is an optional Boolean. This parameter has been deprecated so modern browsers may not support it. This method returns a reference to the new window object. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Opens a new window that opens the IBM home page and has a width of <br> 600 and a height of 800) <br> let thisWindow = window.open("http://www.ibm.com", "myWindow", <br> "width"=600, "height"=800); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> window.scrollTo() </div>
+        </td>
+    
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Scrolls to a particular place in a window. Parameters include the x-coordinate which is the left-most pixel and the y-coordinate which is the upper-most pixel. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Scrolls the window to the pixel located at the coordinate (20, 200)<br> window.scrollTo(20, 200); </div>
+        </td>
+    </tr>
+<!--Space in between rows-->
+    <tr>
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> Wrapper Objects </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-black-500 whitespace-prewrap"> Primitive types can be converted to objects using wrapper objects. They are the same name as the primitive except they start with uppercase letter. The "typeof" keyword returns a string indicating the data type of the operand. </div>
+        </td>
+
+<!--Space in between cells-->
+
+        <td class="w-1/3 border"> 
+            <div class="w-full max-h-14 overflow-y-auto p-2 break-words whitespace-prewrap text-left text-red-500 whitespace-prewrap"> //Enables the use of properties and methods of the String class such as <br> the property n.length <br> let n= new String ("abc"); <br> <br> //Returns string <br> typeof "abc"; <br> <br> //Returns object <br> typeof new String("abc"); </div>
+        </td>
+    </tr>
+</tbody>
+</table>  
+</div>
+
+
+
+</body>
+</html>
+
